@@ -13,7 +13,7 @@ int main (){
   cin >> response;
   while (response == 'Y'){
     int number;
-    cout << "Give me a number to calculate the factorial of:" << endl << "The number must be between 1 and 12: ";
+    cout << "Give me a number to calculate the factorial of:" << endl << "The number must be an integer between 1 and 12: ";
     cin >> number;
     if (number>0 && number<13)
       cout << "The factorial of the number " << number << " is: " << Factorial(number) << endl;

@@ -1,0 +1,28 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main(){
+  int size;
+  double nums,sum,ave,sdev,var;
+  cout << "How many numbers do you want to calculate: ";
+  cin >> size;
+  double Array[size];
+  for (int i=0; i<size; i++){
+    cin >> nums;
+    Array[i] = nums;
+  }
+  for (int i=0; i<size; i++){
+    sum = sum + Array[i];
+  }
+  ave = sum/size;
+  for (int i=0; i<nums; i++){
+    var = var + pow((Array[i]-ave),2);
+  }
+  var = var/size;
+  sdev = sqrt(var);
+  cout << "Sum = "<< sum << endl;
+  cout << "Average = " << ave << endl;
+  cout << "Standard Deviation = "<< sdev << endl;
+  return 0;
+}

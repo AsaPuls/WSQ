@@ -7,15 +7,18 @@ long double fact(int divisor,double factorial){
   }
   return factorial;
 }
-long double estim(){
+long double estim(int limdig){
   long double e=1;
   int factorial;
-  for (int divisor=1; divisor<15; divisor++){
+  for (int divisor=1; divisor<limdig; divisor++){
     e = e + (1/fact(divisor,factorial));
   }
   return e;
 }
 int main (){
-  cout << "The value estimates for e is: " << estim() << endl;
+  int limdig;
+  cout << "How many terms do you want to calculate: ";
+  cin >> limdig;
+  cout << "The value estimates for e is: " << estim(limdig) << endl;
   return 0;
 }
